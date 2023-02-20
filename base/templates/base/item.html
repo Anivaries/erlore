@@ -1,0 +1,51 @@
+
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content%}
+
+<div class="container overflow-hidden mt-70" style="width: 50%;">
+    <div class="vh-100 align-items-start mb-70">
+        <div class="row justify-content-start " style="position:relative; top:150px;">
+            <table id="table" class="display">
+                <thead class="tableheader">
+                    <tr><a href="{{request.META.HTTP_REFERER|escape}}">Back</a>
+                        <th>{{ naziv.0 }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in loreitems %}
+                    <tr>
+                        <td><button type="button" class="btn btn-outline-warning" data-mdb-toggle="modal" data-mdb-target="#erModal{{ forloop.counter }}">
+                            {{ item.item_title }}
+                        </button></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+ 
+                 <!-- Modal -->
+                 {% for item in loreitems %}
+                 <div class="modal fade" id="erModal{{forloop.counter}}" tabindex="-1" role="dialog" aria-labelledby="ERModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="ERModalLabel">{{ item.item_title }}</h5>
+                        <button type="button" class="close" data-mdb-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                        <p>{{ item.item_description}}</p>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+

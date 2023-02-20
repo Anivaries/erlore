@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Agmena Pro Regular";
+  src: url("elden_ring_lore/static/fonts/Agmena_Pro_Regular.ttf");
+}
+/* @import url(//db.onlinewebfonts.com/c/b0dde3c6bfa97bbbecf194ef9e5d7abf?family=Agmena+Pro);
+@font-face {font-family: "Agmena Pro"; src: url("//db.onlinewebfonts.com/t/b0dde3c6bfa97bbbecf194ef9e5d7abf.eot"); src: url("//db.onlinewebfonts.com/t/b0dde3c6bfa97bbbecf194ef9e5d7abf.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/b0dde3c6bfa97bbbecf194ef9e5d7abf.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/b0dde3c6bfa97bbbecf194ef9e5d7abf.woff") format("woff"), url("//db.onlinewebfonts.com/t/b0dde3c6bfa97bbbecf194ef9e5d7abf.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/b0dde3c6bfa97bbbecf194ef9e5d7abf.svg#Agmena Pro") format("svg"); }
+body {
+    background-color: lightblue;
+    font-family: verdana;
+  } */
+  a {
+    text-decoration:none;
+}
+.logo {
+    background-image: url("Site-logo.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px;
+    margin: 0px;
+    width: 550px;
+    height: 150px;
+    left: 35%;
+    position: absolute;
+}
+table.display .tableheader tr th {
+    color: orange;
+    text-align: center;
+    font-size: 30px;
+  }
+  .dataTables_paginate {
+    margin-top: 15px;
+    position: absolute;
+    text-align: left;
+    left: 10%;
+}
