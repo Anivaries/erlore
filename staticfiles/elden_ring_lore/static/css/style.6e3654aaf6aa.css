@@ -1,0 +1,26 @@
+
+a {
+    text-decoration:none;
+}
+.logo {
+    background-image: url("Site-logo.182266c0f047.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px;
+    margin: 0px;
+    width: 550px;
+    height: 150px;
+    left: 35%;
+    position: absolute;
+}
+table.display .tableheader tr th {
+    color: orange;
+    text-align: center;
+    font-size: 30px;
+  }
+  .dataTables_paginate {
+    margin-top: 15px;
+    position: absolute;
+    text-align: left;
+    left: 10%;
+}
