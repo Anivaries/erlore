@@ -1,0 +1,1 @@
+web: gunicorn elden_ring_lore.wsgi --log-file -

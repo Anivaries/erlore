@@ -2,6 +2,7 @@
 from pathlib import Path
 import environ
 import os
+import django_heroku
 
 env = environ.Env(
     DEBUG=(bool, False)
@@ -17,7 +18,7 @@ SECRET_KEY = env('SECRET_KEY')
 
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://erlore-website.herokuapp.com/']
 
 # Application definition
 
@@ -107,6 +108,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
@@ -120,3 +122,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media').replace('\\', '/')
 MEDIA_URL = '/media/'
+
+django_heroku.settings(locals())
