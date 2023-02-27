@@ -4,6 +4,37 @@
     <div class="vh-100 d-flex align-items-center">
         <div class="row justify-content-center">
             <div class="col-9">
+                
+                    <a href="/lore/1/" style="text-decoration:none;">
+                        <img src="elden_ring_lore/static/groups/places.jpg" class="img-fluid hover-shadow rounded-4 my-1 mx-1"></a>  
+                
+                    <a href="/lore/2/" style="text-decoration:none;">
+                        <img src="elden_ring_lore/static/groups/groups.jpg" class="img-fluid hover-shadow rounded-4 my-1 mx-1"></a>  
+                
+                    <a href="/lore/3/" style="text-decoration:none;">
+                        <img src="elden_ring_lore/static/groups/people.jpg" class="img-fluid hover-shadow rounded-4 my-1 mx-1"></a>  
+                
+                    <a href="/lore/4/" style="text-decoration:none;">
+                        <img src="elden_ring_lore/static/groups/events.jpg" class="img-fluid hover-shadow rounded-4 my-1 mx-1"></a>  
+                
+                    <a href="/lore/5/" style="text-decoration:none;">
+                        <img src="elden_ring_lore/static/groups/other.jpg" class="img-fluid hover-shadow rounded-4 my-1 mx-1"></a>  
+                
+                    <a href="/lore/6/" style="text-decoration:none;">
+                        <img src="elden_ring_lore/static/groups/creatures.jpg" class="img-fluid hover-shadow rounded-4 my-1 mx-1"></a>  
+                
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% comment %} {% block group %}
+<div class="container overflow-hidden">
+    <div class="vh-100 d-flex align-items-center">
+        <div class="row justify-content-center">
+            <div class="col-9">
                 {% for item in group %}
                     <a href="{% url 'lores:lore_list' item.id %}" style="text-decoration:none;">
                         <img src="{{item.group_image.url}}" class="img-fluid hover-shadow rounded-4 my-1 mx-1"/></a>  
@@ -12,4 +43,4 @@
         </div>
     </div>
 </div>
-{% endblock %}
+{% endblock %} {% endcomment %}
