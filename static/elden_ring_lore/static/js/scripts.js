@@ -1,6 +1,7 @@
 // turn off datatable pagination 
 $(document).ready(function () {
   $('#table').dataTable({
+    "autoWidth": false,
     "responsive": true,
     "info": false,
     "searching": false,

@@ -1,34 +1,61 @@
-body {
-    overflow: auto;
-}
-
 a {
     text-decoration: none;
 }
 
-.logo {
-    background-image: url("Site-logo.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 0px;
-    margin: 0px;
-    width: 550px;
-    height: 150px;
-    left: 35%;
-    position: absolute;
+@media (min-width: 1200px) {
+    .logo {
+        background-image: url("Site-logo.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0px;
+        margin: 0px;
+        width: 550px;
+        height: 150px;
+        left: 35%;
+        /* position: relative; */
+        position: sticky;
+    }
+
+    .responsive-font-tables {
+        font-size: 25px;
+    }
 }
 
+@media (max-width: 1199.98px) {
+    .logo {
+        background-image: url("Site-logo.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0px;
+        margin: 0px;
+        width: 184px;
+        height: 50px;
+        left: 35%;
+        /* position: relative; */
+        position: sticky;
+    }
+
+    .responsive-font-tables {
+        font-size: 20px;
+    }
+}
+
+
 table.display .tableheader tr th {
-    color: orange;
-    text-align: center;
-    font-size: 30px;
+    color: rgb(209, 127, 20);
+    text-align: end;
+    font-size: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
 }
 
 .dataTables_paginate {
     margin-top: 15px;
-    position: absolute;
-    text-align: left;
-    left: 10%;
+    /* position: relative; */
+    position: fixed;
+    text-align: center;
+    /* left: 50%; */
 }
 
 @media screen and (max-width: 767px) {
@@ -45,16 +72,34 @@ table.display .tableheader tr th {
     }
 }
 
-/* If the screen size is 1200px wide or more, set the font-size to 25px */
-@media (min-width: 1200px) {
-    .responsive-font-tables {
-        font-size: 25px;
-    }
+.bg-image:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1
 }
 
-/* If the screen size is smaller than 1200px, set the font-size to 20px */
-@media (max-width: 1199.98px) {
-    .responsive-font-tables {
-        font-size: 20px;
-    }
+.bg-image>* {
+    position: relative;
+    z-index: 2;
+}
+
+.modal-backdrop {
+    /* - no overlay */
+    display: none;
+}
+
+.modal {
+    /* - custom overlay */
+    background-color: rgba(10, 10, 10, 0.45);
+}
+
+.pagination {
+    --bs-pagination-padding-x: 0.4rem;
+    --bs-pagination-padding-y: 0.3rem;
 }

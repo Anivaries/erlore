@@ -22,12 +22,9 @@
         rel="stylesheet"
         />
         <!-- DataTable -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
-        {% comment %} <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css"> {% endcomment %}
-        <!-- proba -->
+        <link href="https://cdn.datatables.net/1.13.3/css/dataTables.bootstrap5.min.css"/>
+        <link href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap5.min.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
-        {% comment %} <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css"> {% endcomment %}
-        {% comment %} <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap5.min.css"> {% endcomment %}
       </head>
 <body>
 <!-- Background image -->
@@ -36,7 +33,6 @@
   style="
         background-image: url('{% static "elden_ring_lore/static/images/er-godwyn-the-golden-assassination.jpg" %}');
         height: 100vh;">
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
 <!-- Background image -->
       <a href="/">
       <div class="logo">
@@ -48,7 +44,6 @@
         
       </div>
     </div>
-
 {% if is_paginated %}
   <div class="fixed-bottom">
       <div class="row justify-content-center">
@@ -80,7 +75,7 @@
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
 <script type="text/javascript" src="{% static 'elden_ring_lore/static/js/scripts.js' %}"></script>
+
 </body>
 </html>
