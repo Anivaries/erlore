@@ -124,7 +124,18 @@ if DEBUG:
    ]
 else:
    STATIC_ROOT = os.path.join(BASE_DIR,'static')
-   LOGGING = {
+
+
+# Default primary key field type
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media').replace('\\', '/')
+MEDIA_URL = '/media/'
+
+django_heroku.settings(locals())
+
+LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'handlers': {
@@ -139,13 +150,3 @@ else:
         },
     },
 }
-
-# Default primary key field type
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-MEDIA_ROOT =  os.path.join(BASE_DIR, 'media').replace('\\', '/')
-MEDIA_URL = '/media/'
-
-django_heroku.settings(locals())
-
