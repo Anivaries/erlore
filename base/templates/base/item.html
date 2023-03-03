@@ -3,10 +3,10 @@
 {% load static %}
 {% block content%}
 
-<div class="container-fluid overflow-hidden mt-70" style="width: 50%;">
+<div class="container-fluid overflow-hidden mt-70">
     <div class="vh-100">
         <div class="row justify-content-center mx-5">
-            <table id="table" class="display">
+            <table data-page-length='15' id="table" class="display"><span id="footer"></span>
                 <thead class="tableheader">
                     <tr><a href="{{request.META.HTTP_REFERER|escape}}">Back</a>
                         <th>{{ naziv.0 }}</th>
@@ -15,7 +15,7 @@
                 <tbody>
                     {% for item in loreitems %}
                     <tr>
-                        <td><button type="button" class="btn btn-outline-warning border-0" style="white-space: normal; font-size : 17px;" data-mdb-toggle="modal" data-mdb-target="#erModal{{ forloop.counter }}">
+                        <td><button type="button" class="btn btn-outline-warning mb-1"  data-mdb-toggle="modal" data-mdb-target="#erModal{{ forloop.counter }}">
                             {% comment %} <p1 style="font-size : 17px; width: 100%; height: 100px; "> {% endcomment %}
                                 <style="text-align:left; width:100%; overflow: hidden;">{{ item.item_title }}</style>
                             {% comment %} </p1> {% endcomment %}

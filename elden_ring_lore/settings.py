@@ -28,7 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    # 'django.contrib.staticfiles',
+    'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
     'base',
 ]
@@ -124,17 +124,7 @@ if DEBUG:
    ]
 else:
    STATIC_ROOT = os.path.join(BASE_DIR,'static')
-
-# Default primary key field type
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-MEDIA_ROOT =  os.path.join(BASE_DIR, 'media').replace('\\', '/')
-MEDIA_URL = '/media/'
-
-django_heroku.settings(locals())
-
-LOGGING = {
+   LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'handlers': {
@@ -149,3 +139,13 @@ LOGGING = {
         },
     },
 }
+
+# Default primary key field type
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media').replace('\\', '/')
+MEDIA_URL = '/media/'
+
+django_heroku.settings(locals())
+

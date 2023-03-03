@@ -1,42 +1,161 @@
+body,
+html {
+    height: 100%;
+}
+
 a {
     text-decoration: none;
 }
 
-@media (min-width: 1200px) {
-    .logo {
-        background-image: url("Site-logo.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding: 0px;
-        margin: 0px;
-        width: 550px;
-        height: 150px;
-        left: 35%;
-        /* position: relative; */
-        position: sticky;
-    }
-
-    .responsive-font-tables {
-        font-size: 25px;
-    }
+.logo-slika {
+    text-align: center;
 }
 
-@media (max-width: 1199.98px) {
-    .logo {
-        background-image: url("Site-logo.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding: 0px;
-        margin: 0px;
-        width: 184px;
-        height: 50px;
-        left: 35%;
-        /* position: relative; */
-        position: sticky;
+.logo-slika img {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo-slika a {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px auto;
+    height: 150px auto;
+
+}
+
+.modal-backdrop {
+    /* - no overlay */
+    display: none;
+}
+
+.modal {
+    /* - custom overlay */
+    background-color: rgba(10, 10, 10, 0.45);
+}
+
+
+@media (min-width: 1200px) {
+
+    .container-group {
+        --mdb-gutter-x: 1.5rem;
+        --mdb-gutter-y: 0;
+        width: 70% !important;
+        padding-right: calc(var(--mdb-gutter-x)*0.5);
+        padding-left: calc(var(--mdb-gutter-x)*0.5);
+        margin-right: auto;
+        margin-left: auto
     }
 
+    .container,
+    .container-fluid,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        --mdb-gutter-x: 1.5rem;
+        --mdb-gutter-y: 0;
+        width: 50% !important;
+        padding-right: calc(var(--mdb-gutter-x)*0.5);
+        padding-left: calc(var(--mdb-gutter-x)*0.5);
+        margin-right: auto;
+        margin-left: auto
+    }
+
+    .slika-iza {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("er-godwyn-the-golden-assassination.jpg");
+        position: relative;
+        overflow: hidden;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        z-index: 2;
+        background-position: 100%;
+
+    }
+
+    .btn {
+        border: 0 !important;
+    }
+
+    li.paginate_button.previous {
+        display: inline;
+    }
+
+    li.paginate_button.next {
+        display: inline;
+    }
+
+    .pagination {
+        justify-content: left;
+    }
+
+}
+
+
+
+
+@media (max-width: 1199.98px) {
     .responsive-font-tables {
         font-size: 20px;
+    }
+
+    .container,
+    .container-fluid,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        --mdb-gutter-x: 1.5rem;
+        --mdb-gutter-y: 0;
+        width: 100% !important;
+        padding-right: calc(var(--mdb-gutter-x)*0.5);
+        padding-left: calc(var(--mdb-gutter-x)*0.5);
+        margin-right: auto;
+        margin-left: auto
+    }
+
+    .dataTables_paginate {
+        margin-top: 15px;
+        position: relative;
+        text-align: center;
+    }
+
+    .slika-iza {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("er-godwyn-the-golden-assassination.jpg");
+        position: relative;
+        overflow: hidden;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 2;
+        background-position: 100%;
+    }
+
+    .btn-outline-warning {
+        --bs-btn-font-size: 1rem !important;
+        --bs-btn-padding-y: 0.3rem !important;
+    }
+
+    .pagination {
+        justify-content: center;
+    }
+
+    .logo-slika a {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 550px auto;
+        height: 80px;
+
     }
 }
 
@@ -48,14 +167,13 @@ table.display .tableheader tr th {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-end;
+    justify-content: center;
 }
 
 .dataTables_paginate {
     margin-top: 15px;
-    /* position: relative; */
-    position: fixed;
+    position: relative;
     text-align: center;
-    /* left: 50%; */
 }
 
 @media screen and (max-width: 767px) {
@@ -70,36 +188,4 @@ table.display .tableheader tr th {
     li.paginate_button {
         display: none;
     }
-}
-
-.bg-image:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1
-}
-
-.bg-image>* {
-    position: relative;
-    z-index: 2;
-}
-
-.modal-backdrop {
-    /* - no overlay */
-    display: none;
-}
-
-.modal {
-    /* - custom overlay */
-    background-color: rgba(10, 10, 10, 0.45);
-}
-
-.pagination {
-    --bs-pagination-padding-x: 0.4rem;
-    --bs-pagination-padding-y: 0.3rem;
 }

@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
     <head>
+        
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Elden Ring Lore</title>
@@ -25,25 +26,29 @@
         <link href="https://cdn.datatables.net/1.13.3/css/dataTables.bootstrap5.min.css"/>
         <link href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap5.min.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+        <style>
+          body,html {
+                height: 100vh;
+          }
+        </style>
       </head>
 <body>
 <!-- Background image -->
-<div
-  class="bg-image"
-  style="
-        background-image: url('{% static "elden_ring_lore/static/images/er-godwyn-the-golden-assassination.jpg" %}');
-        height: 100vh;">
-<!-- Background image -->
-      <a href="/">
-      <div class="logo">
-      </div></a>
+<div class="slika-iza">
+  <div class="logo-slika">
+    <a href="/">
+      <img src="{% static 'elden_ring_lore/static/css/Site-logo.png'%}"/>
+      </a>
+  </div>
+  
 
-      <div>
-        {% block group%}{% endblock %}{% block items%}{% endblock %}{% block content %}{% endblock %}
-      </div>
-        
-      </div>
+    <div>
+      {% block group%}{% endblock %}{% block items%}{% endblock %}{% block content %}{% endblock %}
+      
     </div>
+</div>
+
+
 {% if is_paginated %}
   <div class="fixed-bottom">
       <div class="row justify-content-center">
