@@ -21,14 +21,6 @@ a {
     margin-right: auto;
 }
 
-.logo-slika a {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 550px auto;
-    height: 150px auto;
-
-}
 
 .modal-backdrop {
     /* - no overlay */
@@ -40,11 +32,20 @@ a {
     background-color: rgba(10, 10, 10, 0.45);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1199.99px) {
 
     .margin-test {
         margin-right: 5;
         margin-top: 5;
+
+    }
+
+    .logo-slika a {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 550px auto;
+        height: 150px auto;
 
     }
 
@@ -115,8 +116,20 @@ a {
         margin-top: 5;
     }
 
+
     .responsive-font-tables {
         font-size: 20px;
+    }
+
+    .container-group {
+        --mdb-gutter-x: 1.5rem;
+        --mdb-gutter-y: 0;
+        /* width: 100% !important; */
+        height: 100vh;
+        padding-right: calc(var(--mdb-gutter-x)*0.5);
+        padding-left: calc(var(--mdb-gutter-x)*0.5);
+        margin-right: auto;
+        margin-left: auto
     }
 
     .container,
@@ -128,7 +141,7 @@ a {
     .container-xxl {
         --mdb-gutter-x: 1.5rem;
         --mdb-gutter-y: 0;
-        width: 100% !important;
+        width: 70% !important;
         padding-right: calc(var(--mdb-gutter-x)*0.5);
         padding-left: calc(var(--mdb-gutter-x)*0.5);
         margin-right: auto;
@@ -166,24 +179,10 @@ a {
         margin-left: auto;
         margin-right: auto;
         width: 550px auto;
-        height: 80px;
+        height: 140px auto;
 
     }
 }
-
-/* @media screen and (max-width: 767px) {
-    li.paginate_button.previous {
-        display: inline;
-    }
-
-    li.paginate_button.next {
-        display: inline;
-    }
-
-    li.paginate_button {
-        display: none;
-    }
-} */
 
 
 @media (max-width: 829.98px) {
@@ -247,7 +246,7 @@ a {
         margin-left: auto;
         margin-right: auto;
         width: 550px auto;
-        height: 80px;
+        height: 80px auto;
 
     }
 }
