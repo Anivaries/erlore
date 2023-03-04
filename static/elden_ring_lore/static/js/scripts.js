@@ -1,7 +1,8 @@
 // turn off datatable pagination 
+
 $(document).ready(function () {
   $('#table').dataTable({
-    "autoWidth": false,
+    "autoWidth": true,
     "responsive": true,
     "info": false,
     "searching": false,
@@ -15,7 +16,8 @@ $(document).ready(function () {
       }
     }
   })
-});
+})
+  ;
 
 // 5 buttons datatable pagination
 $.fn.DataTable.ext.pager.numbers_length = 5;
