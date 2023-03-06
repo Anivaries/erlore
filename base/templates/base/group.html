@@ -22,19 +22,3 @@
     </div>
 </div>
 {% endblock %}
-
-
-{% comment %} {% block group %}
-<div class="container overflow-hidden">
-    <div class="vh-100 d-flex align-items-center">
-        <div class="row justify-content-center">
-            <div class="col-9">
-                {% for item in group %}
-                    <a href="{% url 'lores:lore_list' item.id %}" style="text-decoration:none;">
-                        <img src="{{item.group_image.url}}" class="img-fluid hover-shadow rounded-4 my-1 mx-1"/></a>  
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</div>
-{% endblock %} {% endcomment %}

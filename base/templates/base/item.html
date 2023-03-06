@@ -6,16 +6,16 @@
 <div class="container-fluid overflow-hidden mt-70">
     <div class="vh-100">
         <div class="row justify-content-center margin-test">
-            <table data-page-length='15' id="table" class="display">
+            <table data-page-length='15' id="table" class="display" style="width:100%">
                 <thead class="tableheader">
                     <tr><a href="{{request.META.HTTP_REFERER|escape}}">Back</a>
-                        <th>{{ naziv.0 }}</th>
+                        <th class="erlorefont">{{ naziv.0 }}</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for item in loreitems %}
                     <tr>
-                        <td><button type="button" class="btn btn-outline-warning mb-1"  data-mdb-toggle="modal" data-mdb-target="#erModal{{ forloop.counter }}">
+                        <td class="erlorefont"><button type="button" class="btn btn-outline-warning mb-1"  data-mdb-toggle="modal" data-mdb-target="#erModal{{ forloop.counter }}">
                             
                                 {{ item.item_title }}
                             
@@ -29,14 +29,14 @@
                  {% for item in loreitems %}
                  <div class="modal fade" id="erModal{{forloop.counter}}" tabindex="-1" role="dialog" aria-labelledby="ERModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
-                    <div class="modal-content">
+                    <div class="modal-content ">
                         <div class="modal-header">
                         <h5 class="modal-title" id="ERModalLabel">{{ item.item_title }}</h5>
                         <button type="button" class="close" data-mdb-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body img-responsive">
                         <p>{{ item.item_description}}</p>
                         </div>
                         <div class="modal-footer">
