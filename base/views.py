@@ -46,3 +46,15 @@ class LoreItemListView(ListView):
         pk = self.kwargs['pk']
         context["naziv"] = Lore.objects.filter(name=Lore.objects.get(pk=pk))
         return context
+
+
+# Django search, but since im using DataTables, there is no need for this code 
+# class SearchResults(ListView):
+#     model = Lore
+#     template_name = 'base/search.html'
+#     context_object_name = 'search_lore'
+
+#     def get_queryset(self):
+#         query = self.request.GET.get('q')
+#         return Lore.objects.filter(name__icontains=query)
+    

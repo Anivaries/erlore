@@ -2,10 +2,12 @@
 
 $(document).ready(function () {
   $('#table').dataTable({
+    "dom": 'lrti' + "<'row'<'col-sm-12 col-md-5'f><'col-sm-12 col-md-7'p>>",
+
     "autoWidth": true,
     "responsive": true,
     "info": false,
-    "searching": false,
+    "searching": true,
     "lengthChange": false,
     "ordering": false,
     "fnDrawCallback": function (oSettings) {
@@ -21,4 +23,15 @@ $(document).ready(function () {
 
 // 5 buttons datatable pagination
 $.fn.DataTable.ext.pager.numbers_length = 5;
-$.fn.DataTable.ext.pager.full_numbers_no_ellipses = function (e, r) { var a = [], n = $.fn.DataTable.ext.pager.numbers_length, t = Math.floor(n / 2), l = function (e, r) { var a; void 0 === r ? (r = 0, a = e) : (a = r, r = e); for (var n = [], t = r; t < a; t++)n.push(t); return n }; return (a = r <= n ? l(0, r) : e <= t ? l(0, n) : e >= r - 1 - t ? l(r - n, r) : l(e - t, e + t + 1)).DT_el = "span", ["first", "previous", a, "next", "last"] };
+$.fn.DataTable.ext.pager.full_numbers_no_ellipses = function (e, r) {
+  var a = [],
+    n = $.fn.DataTable.ext.pager.numbers_length,
+    t = Math.floor(n / 2),
+    l = function (e, r) {
+      var a;
+      void 0 === r ? (r = 0, a = e) : (a = r, r = e);
+      for (var n = [], t = r; t < a; t++)n.push(t);
+      return n
+    };
+  return (a = r <= n ? l(0, r) : e <= t ? l(0, n) : e >= r - 1 - t ? l(r - n, r) : l(e - t, e + t + 1)).DT_el = "span", ["first", "previous", a, "next", "last"]
+};

@@ -1,0 +1,15 @@
+{% extends 'base/base.html'%}
+{% block search%}
+<div class="container vh-100">
+    <br><br>
+
+    <h1 style="color: red;">Search Results</h1>
+
+    <br><br>
+    {% for result in search_lore%}
+    <div style="font-size:25px"><a href="{% url 'lores:loreitems' result.id %}">{{ result.name }}<a/> in {{result.belongs_to}}</div>
+    {% empty %}
+    <p class="text-white">No results found. Try again.</p>
+    {% endfor %}
+
+{% endblock%}
