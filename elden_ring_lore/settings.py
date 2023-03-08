@@ -20,10 +20,13 @@ DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = ['eldenlore.herokuapp.com/']
 
-# Application definition
-
+if DEBUG :
+    ADMIN_ENABLED = True
+else:
+    ADMIN_ENABLED = False
+   
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -32,6 +35,8 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'base',
 ]
+if ADMIN_ENABLED is True:
+    INSTALLED_APPS.append('django.contrib.admin') 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -64,14 +69,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'elden_ring_lore.wsgi.application'
 
-
-#Database
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -114,16 +111,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static'),
-#     ]
 if DEBUG:
    STATICFILES_DIRS = [
    os.path.join(BASE_DIR, 'static'),
    ]
 else:
-   STATIC_ROOT = os.path.join(BASE_DIR,'static')
+    STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
 
 
 # Default primary key field type
@@ -150,3 +144,4 @@ LOGGING = {
         },
     },
 }
+
