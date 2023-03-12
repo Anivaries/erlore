@@ -21,7 +21,7 @@
                     <tbody>
                         {% for item in lore_list %}
                         <tr> 
-                            <td class="erlorefont link-warning"><a style="text-decoration:none; color:goldenrod;" href="{% url 'lores:loreitems' item.id %}">{{item}}</a></td>
+                            <td class="erlorefont "><a style="text-decoration:none;" href="{% url 'lores:loreitems' item.id %}">{{item}}</a></td>
                         </tr>
                         {% endfor %}
                     </tbody>

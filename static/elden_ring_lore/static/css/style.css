@@ -12,8 +12,14 @@ html {
     height: 100%;
 }
 
-table.dataTable tbody tr:hover a {
-    background-color: rgba(255, 255, 170, 0.26);
+table.dataTable tbody tr a:hover,
+a:focus {
+    color: rgb(255, 251, 0);
+}
+
+table.dataTable tbody tr a {
+    color: goldenrod;
+
 }
 
 a {
