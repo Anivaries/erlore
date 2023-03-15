@@ -45,12 +45,12 @@ a {
 .modal-body {
     /* background-blend-mode: darken; */
     background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)), url('elden-ring-raani.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)), url('elden-ring-raani.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
     width: 100%;
     color: rgb(204, 207, 0);
-    /* color: #fffb00; */
 
 }
 
@@ -119,6 +119,9 @@ table.display .tableheader tr th {
     --bs-btn-color: #c4b20c;
     --bs-btn-hover-bg: #ffda07e8;
     font-weight: 600;
+    --bs-btn-color: #c4b20c;
+    --bs-btn-hover-bg: #ffda07e8;
+    font-weight: 600;
 }
 
 .form-control {
@@ -158,303 +161,306 @@ table.display .tableheader tr th {
         display: none;
     }
 
-    .logo-slika {
-        text-align: center;
-    }
+    @media (min-width: 1366.1px) {
+        .logo-slika {
+            text-align: center;
+        }
 
-    .logo-slika img {
-        width: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+        .logo-slika img {
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    .margin-test {
-        margin-right: 5px;
-        margin-top: 5px;
+        .margin-test {
+            margin-right: 5px;
+            margin-top: 5px;
 
-    }
+        }
 
-    .logo-slika a {
-        display: inline-block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 550px auto;
-        height: 150px auto;
+        .logo-slika a {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 550px auto;
+            height: 150px auto;
 
-    }
+        }
 
-    .container-group {
-        /* --mdb-gutter-x: 1.5rem; */
-        --mdb-gutter-y: 0;
-        width: 70% !important;
-        padding-right: calc(var(--mdb-gutter-x)*0.5);
-        padding-left: calc(var(--mdb-gutter-x)*0.5);
-        margin-right: auto;
-        margin-left: auto
-    }
+        .container-group {
+            /* --mdb-gutter-x: 1.5rem; */
+            --mdb-gutter-y: 0;
+            width: 70% !important;
+            padding-right: calc(var(--mdb-gutter-x)*0.5);
+            padding-left: calc(var(--mdb-gutter-x)*0.5);
+            margin-right: auto;
+            margin-left: auto
+        }
 
-    .container,
-    .container-fluid,
-    .container-lg,
-    .container-md,
-    .container-sm,
-    .container-xl,
-    .container-xxl {
-        --mdb-gutter-x: 1.5rem;
-        --mdb-gutter-y: 0;
-        width: 50% !important;
-        padding-right: calc(var(--mdb-gutter-x)*0.5);
-        padding-left: calc(var(--mdb-gutter-x)*0.5);
-        margin-right: auto;
-        margin-left: auto
-    }
+        .container,
+        .container-fluid,
+        .container-lg,
+        .container-md,
+        .container-sm,
+        .container-xl,
+        .container-xxl {
+            --mdb-gutter-x: 1.5rem;
+            --mdb-gutter-y: 0;
+            width: 50% !important;
+            padding-right: calc(var(--mdb-gutter-x)*0.5);
+            padding-left: calc(var(--mdb-gutter-x)*0.5);
+            margin-right: auto;
+            margin-left: auto
+        }
 
-    .slika-iza {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("er-godwyn-the-golden-assassination.jpg");
-        position: relative;
-        overflow: hidden;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-        z-index: 2;
-        background-position: 100%;
+        .slika-iza {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("er-godwyn-the-golden-assassination.jpg");
+            position: relative;
+            overflow: hidden;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 2;
+            background-position: 100%;
 
-    }
+        }
 
-    .btn {
-        border: 0 !important;
-    }
+        .btn {
+            border: 0 !important;
+        }
 
-    li.paginate_button.previous {
-        display: inline;
-    }
+        li.paginate_button.previous {
+            display: inline;
+        }
 
-    li.paginate_button.next {
-        display: inline;
-    }
+        li.paginate_button.next {
+            display: inline;
+        }
 
-    .div.dataTables_wrapper .div.dataTables_paginate .ul.pagination {
-        justify-content: flex-start !important;
-    }
+        .div.dataTables_wrapper .div.dataTables_paginate .ul.pagination {
+            justify-content: flex-start !important;
+        }
 
-    .dataTables_filter {
-        font-size: 17px;
-        color: #cac40a
-    }
-
-
-    .form_control.form-control-sm {
-        opacity: 0;
-    }
+        .dataTables_filter {
+            font-size: 17px;
+            color: #cac40a
+        }
 
 
+        .form_control.form-control-sm {
+            opacity: 0;
+        }
 
-}
 
-
-@media screen and (min-width:830px) and (max-width: 1366.1px) {
-    .smallnav {
-        display: none;
-    }
-
-    .logo-slika {
-        text-align: center;
-    }
-
-    .logo-slika img {
-        width: 35%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        /* display: block; */
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .logo-slika a {
-        display: inline-block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-        /* height: auto; */
 
     }
 
-    .slika-iza {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("er-godwyn-the-golden-assassination.jpg");
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        z-index: 2;
-        background-position: 100%;
-    }
 
-    .dataTables_filter {
-        font-size: 15px;
-        color: #cac40a
-    }
+    @media screen and (min-width:830px) and (max-width: 1366.1px) {
+        .smallnav {
+            display: none;
+        }
 
-    .margin-test {
-        margin-right: 5px;
-        margin-top: 5px;
-    }
+        @media screen and (min-width:830px) and (max-width: 1366px) {
 
+            .logo-slika {
+                text-align: center;
+            }
 
-    .responsive-font-tables {
-        font-size: 20px;
-    }
+            .logo-slika img {
+                width: 35%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                /* display: block; */
+                margin-left: auto;
+                margin-right: auto;
+            }
 
-    .container-group {
-        /* --mdb-gutter-x: 0; */
-        --mdb-gutter-y: 0;
-        /* height: 100vh; */
-        padding-right: calc(var(--mdb-gutter-x)*0.5);
-        padding-left: calc(var(--mdb-gutter-x)*0.5);
-        margin-right: auto;
-        margin-left: auto
-    }
+            .logo-slika a {
+                display: inline-block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                /* height: auto; */
 
-    .container,
-    .container-fluid,
-    .container-lg,
-    .container-md,
-    .container-sm,
-    .container-xl,
-    .container-xxl {
-        --mdb-gutter-x: 0.1rem;
-        --mdb-gutter-y: 0;
-        width: 70% !important;
-        padding-right: calc(var(--mdb-gutter-x)*0.5);
-        padding-left: calc(var(--mdb-gutter-x)*0.5);
-        margin-right: auto;
-        margin-left: auto
-    }
+            }
 
-    .dataTables_paginate {
-        margin-top: 15px;
-        position: relative;
-        text-align: center;
-    }
+            .slika-iza {
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("er-godwyn-the-golden-assassination.jpg");
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                z-index: 2;
+                background-position: 100%;
+            }
+
+            .dataTables_filter {
+                font-size: 15px;
+                color: #cac40a
+            }
+
+            .margin-test {
+                margin-right: 5px;
+                margin-top: 5px;
+            }
 
 
+            .responsive-font-tables {
+                font-size: 20px;
+            }
 
-    .btn-outline-warning {
-        text-align: start !important;
-        font-size: 12px !important;
-    }
+            .container-group {
+                /* --mdb-gutter-x: 0; */
+                --mdb-gutter-y: 0;
+                /* height: 100vh; */
+                padding-right: calc(var(--mdb-gutter-x)*0.5);
+                padding-left: calc(var(--mdb-gutter-x)*0.5);
+                margin-right: auto;
+                margin-left: auto
+            }
 
-    .pagination {
-        justify-content: left;
-    }
+            .container,
+            .container-fluid,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl,
+            .container-xxl {
+                --mdb-gutter-x: 0.1rem;
+                --mdb-gutter-y: 0;
+                width: 70% !important;
+                padding-right: calc(var(--mdb-gutter-x)*0.5);
+                padding-left: calc(var(--mdb-gutter-x)*0.5);
+                margin-right: auto;
+                margin-left: auto
+            }
 
-}
+            .dataTables_paginate {
+                margin-top: 15px;
+                position: relative;
+                text-align: center;
+            }
 
 
-@media (max-width: 829.98px) {
 
-    .smallnav {
-        float: right;
-    }
+            .btn-outline-warning {
+                text-align: start !important;
+                font-size: 12px !important;
+            }
 
-    li {
-        margin: 5px 0;
-    }
+            .pagination {
+                justify-content: left;
+            }
 
-    .navbar-toggler:focus {
-        text-decoration: none;
-        outline: 0;
-        box-shadow: none;
-    }
+        }
 
-    .topnav {
-        display: none;
-    }
 
-    .dataTables_filter {
-        font-size: 14px;
-        color: #cac40a
-    }
+        @media (max-width: 829.98px) {
 
-    div {
-        overflow-y: hidden;
-        overflow-x: hidden;
-    }
+            .smallnav {
+                float: right;
+            }
 
-    .container,
-    .container-fluid,
-    .container-lg,
-    .container-md,
-    .container-sm,
-    .container-xl,
-    .container-xxl {
-        --mdb-gutter-x: 1.5rem;
-        --mdb-gutter-y: 0;
-        width: 100% !important;
-        padding-right: calc(var(--mdb-gutter-x)*0.5);
-        padding-left: calc(var(--mdb-gutter-x)*0.5);
-        margin-right: auto;
-        margin-left: auto
-    }
+            li {
+                margin: 5px 0;
+            }
 
-    .dataTables_paginate {
-        margin-top: 15px;
-        position: relative;
-        text-align: center;
-    }
+            .navbar-toggler:focus {
+                text-decoration: none;
+                outline: 0;
+                box-shadow: none;
+            }
 
-    .pagination {
-        padding-top: 7px;
-        justify-content: center;
-    }
+            .topnav {
+                display: none;
+            }
 
-    .slika-iza {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("er-godwyn-the-golden-assassination.jpg");
-        position: relative;
-        overflow: hidden;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        z-index: 2;
-        background-position: 100%;
-    }
+            .dataTables_filter {
+                font-size: 14px;
+                color: #cac40a
+            }
 
-    .btn-outline-warning {
-        text-align: start !important;
-        --bs-btn-padding-x: 0.3rem !important;
-        --bs-btn-padding-y: 0.2rem !important;
-        font-size: 14px !important;
-    }
+            div {
+                overflow-y: hidden;
+                overflow-x: hidden;
+            }
 
-    table.display .tableheader tr th {
-        font-size: 21px !important;
-        margin-bottom: 15px !important;
-    }
+            .container,
+            .container-fluid,
+            .container-lg,
+            .container-md,
+            .container-sm,
+            .container-xl,
+            .container-xxl {
+                --mdb-gutter-x: 1.5rem;
+                --mdb-gutter-y: 0;
+                width: 100% !important;
+                padding-right: calc(var(--mdb-gutter-x)*0.5);
+                padding-left: calc(var(--mdb-gutter-x)*0.5);
+                margin-right: auto;
+                margin-left: auto
+            }
 
-    .logo-slika {
-        text-align: center;
-    }
+            .dataTables_paginate {
+                margin-top: 15px;
+                position: relative;
+                text-align: center;
+            }
 
-    .logo-slika img {
-        width: 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+            .pagination {
+                padding-top: 7px;
+                justify-content: center;
+            }
 
-    .logo-slika a {
-        display: inline-block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 550px auto;
-        height: 80px auto;
+            .slika-iza {
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("er-godwyn-the-golden-assassination.jpg");
+                position: relative;
+                overflow: hidden;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                z-index: 2;
+                background-position: 100%;
+            }
 
-    }
-}
+            .btn-outline-warning {
+                text-align: start !important;
+                --bs-btn-padding-x: 0.3rem !important;
+                --bs-btn-padding-y: 0.2rem !important;
+                font-size: 14px !important;
+            }
+
+            table.display .tableheader tr th {
+                font-size: 21px !important;
+                margin-bottom: 15px !important;
+            }
+
+            .logo-slika {
+                text-align: center;
+            }
+
+            .logo-slika img {
+                width: 50%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .logo-slika a {
+                display: inline-block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 550px auto;
+                height: 80px auto;
+
+            }
+        }
