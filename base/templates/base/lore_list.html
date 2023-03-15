@@ -1,5 +1,10 @@
 {% extends 'base/base.html'%}
 {% block items %}
+<style>
+    .logo-slika {
+          display: none;
+    }
+  </style>
 <div class="container overflow-hidden mt-70">
     <div class="vh-100">
         {% comment %} leaving it just in case
@@ -11,6 +16,7 @@
             class="form-control"
             />
         </form> {% endcomment %}
+        
         <div class="row justify-content-center margin-test">
                 <h3 class="text-white mb-0"><table data-page-length='15' id="table" class="display" style="width:100%">
                     <thead>

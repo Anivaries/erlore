@@ -21,8 +21,6 @@ DEBUG = env('DEBUG')
 ALLOWED_HOSTS = ['eldenlore.herokuapp.com/']
 
 if DEBUG :
-    ADMIN_ENABLED = True
-else:
     ADMIN_ENABLED = False
     
    

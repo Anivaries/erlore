@@ -15,6 +15,7 @@ html {
 table.dataTable tbody tr a:hover,
 a:focus {
     color: rgb(255, 251, 0);
+
 }
 
 table.dataTable tbody tr a {
@@ -43,12 +44,13 @@ a {
 
 .modal-body {
     /* background-blend-mode: darken; */
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('elden-ring-raani.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)), url('elden-ring-raani.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
     width: 100%;
-    color: #fffb00;
+    color: rgb(204, 207, 0);
+    /* color: #fffb00; */
 
 }
 
@@ -114,8 +116,9 @@ table.display .tableheader tr th {
 }
 
 .btn-outline-warning {
-    --bs-btn-color: #fff007e3;
-    --bs-btn-hover-bg: #fff907;
+    --bs-btn-color: #c4b20c;
+    --bs-btn-hover-bg: #ffda07e8;
+    font-weight: 600;
 }
 
 .form-control {
@@ -137,7 +140,24 @@ table.display .tableheader tr th {
 }
 
 
-@media (min-width: 1366px) {
+.navbar {
+    --bs-navbar-active-color: rgb(217 255 8 / 90%) !important;
+    --mdb-navbar-box-shadow: none !important;
+}
+
+.justify {
+    justify-content: space-around !important;
+}
+
+.topnav {
+    display: block;
+}
+
+@media (min-width: 1366.2px) {
+    .smallnav {
+        display: none;
+    }
+
     .logo-slika {
         text-align: center;
     }
@@ -236,14 +256,17 @@ table.display .tableheader tr th {
 }
 
 
-@media screen and (min-width:830px) and (max-width: 1365px) {
+@media screen and (min-width:830px) and (max-width: 1366.1px) {
+    .smallnav {
+        display: none;
+    }
 
     .logo-slika {
         text-align: center;
     }
 
     .logo-slika img {
-        width: 50%;
+        width: 35%;
         background-size: cover;
         background-repeat: no-repeat;
         /* display: block; */
@@ -334,6 +357,25 @@ table.display .tableheader tr th {
 
 
 @media (max-width: 829.98px) {
+
+    .smallnav {
+        float: right;
+    }
+
+    li {
+        margin: 5px 0;
+    }
+
+    .navbar-toggler:focus {
+        text-decoration: none;
+        outline: 0;
+        box-shadow: none;
+    }
+
+    .topnav {
+        display: none;
+    }
+
     .dataTables_filter {
         font-size: 14px;
         color: #cac40a
