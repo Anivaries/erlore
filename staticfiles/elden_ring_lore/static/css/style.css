@@ -137,7 +137,7 @@ table.display .tableheader tr th {
 }
 
 
-@media (min-width: 1366px) {
+@media (min-width: 1366.1px) {
     .logo-slika {
         text-align: center;
     }
