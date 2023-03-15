@@ -243,7 +243,7 @@ table.display .tableheader tr th {
     }
 
     .logo-slika img {
-        width: 50%;
+        width: 35%;
         background-size: cover;
         background-repeat: no-repeat;
         /* display: block; */
