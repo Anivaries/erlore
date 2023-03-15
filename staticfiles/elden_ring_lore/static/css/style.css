@@ -43,7 +43,7 @@ a {
 
 .modal-body {
     /* background-blend-mode: darken; */
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('elden-ring-raani.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)), url('elden-ring-raani.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
