@@ -11,6 +11,7 @@ class LoreAdmin(admin.ModelAdmin):
 class LoreItemAdmin(admin.ModelAdmin):
     list_display = ['item_title', 'show_item_type', 'item_description']
     search_fields = ['item_type__name']
+    ordering = ['item_type__name']
 
     def show_item_type(self, obj):
         return "\n".join([a.name for a in obj.item_type.all()])

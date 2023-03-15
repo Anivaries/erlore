@@ -24,9 +24,10 @@ if DEBUG :
     ADMIN_ENABLED = True
 else:
     ADMIN_ENABLED = False
+    
    
 INSTALLED_APPS = [
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',

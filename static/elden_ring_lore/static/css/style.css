@@ -26,20 +26,6 @@ a {
     text-decoration: none;
 }
 
-.logo-slika {
-    text-align: center;
-}
-
-.logo-slika img {
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
 .modal-backdrop {
     /* - no overlay */
     display: none;
@@ -150,7 +136,20 @@ table.display .tableheader tr th {
     width: 100%;
 }
 
-@media (min-width: 1199.99px) {
+
+@media (min-width: 1366px) {
+    .logo-slika {
+        text-align: center;
+    }
+
+    .logo-slika img {
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .margin-test {
         margin-right: 5px;
@@ -168,7 +167,7 @@ table.display .tableheader tr th {
     }
 
     .container-group {
-        --mdb-gutter-x: 1.5rem;
+        /* --mdb-gutter-x: 1.5rem; */
         --mdb-gutter-y: 0;
         width: 70% !important;
         padding-right: calc(var(--mdb-gutter-x)*0.5);
@@ -237,9 +236,42 @@ table.display .tableheader tr th {
 }
 
 
+@media screen and (min-width:830px) and (max-width: 1365px) {
 
+    .logo-slika {
+        text-align: center;
+    }
 
-@media (min-width:830px) and (max-width:1199.98px) {
+    .logo-slika img {
+        width: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* display: block; */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .logo-slika a {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        /* height: auto; */
+
+    }
+
+    .slika-iza {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("er-godwyn-the-golden-assassination.jpg");
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 2;
+        background-position: 100%;
+    }
+
     .dataTables_filter {
         font-size: 15px;
         color: #cac40a
@@ -256,10 +288,9 @@ table.display .tableheader tr th {
     }
 
     .container-group {
-        --mdb-gutter-x: 1.5rem;
+        /* --mdb-gutter-x: 0; */
         --mdb-gutter-y: 0;
-        /* width: 100% !important; */
-        height: 100vh;
+        /* height: 100vh; */
         padding-right: calc(var(--mdb-gutter-x)*0.5);
         padding-left: calc(var(--mdb-gutter-x)*0.5);
         margin-right: auto;
@@ -273,7 +304,7 @@ table.display .tableheader tr th {
     .container-sm,
     .container-xl,
     .container-xxl {
-        --mdb-gutter-x: 1.5rem;
+        --mdb-gutter-x: 0.1rem;
         --mdb-gutter-y: 0;
         width: 70% !important;
         padding-right: calc(var(--mdb-gutter-x)*0.5);
@@ -288,33 +319,15 @@ table.display .tableheader tr th {
         text-align: center;
     }
 
-    .slika-iza {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("er-godwyn-the-golden-assassination.jpg");
-        position: relative;
-        overflow: hidden;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        z-index: 2;
-        background-position: 100%;
-    }
+
 
     .btn-outline-warning {
         text-align: start !important;
-
+        font-size: 12px !important;
     }
 
     .pagination {
         justify-content: left;
-    }
-
-    .logo-slika a {
-        display: inline-block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 550px auto;
-        height: 140px auto;
-
     }
 
 }
@@ -355,6 +368,7 @@ table.display .tableheader tr th {
 
     .pagination {
         padding-top: 7px;
+        justify-content: center;
     }
 
     .slika-iza {
@@ -380,8 +394,17 @@ table.display .tableheader tr th {
         margin-bottom: 15px !important;
     }
 
-    .pagination {
-        justify-content: center;
+    .logo-slika {
+        text-align: center;
+    }
+
+    .logo-slika img {
+        width: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .logo-slika a {
