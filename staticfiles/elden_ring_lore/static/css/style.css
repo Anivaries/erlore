@@ -114,8 +114,9 @@ table.display .tableheader tr th {
 }
 
 .btn-outline-warning {
-    --bs-btn-color: #fff007e3;
+    --bs-btn-color: #c4b20c;
     --bs-btn-hover-bg: #ffda07e8;
+    font-weight: 600;
 }
 
 .form-control {
