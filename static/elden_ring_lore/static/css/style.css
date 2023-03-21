@@ -3,6 +3,36 @@
     src: url('garamond_premier.ttf');
 }
 
+.pagination .page {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #ffd103;
+    background-color: #c9b5b500;
+    border: 2px solid rgb(244, 248, 1) transparent;
+}
+
+.pagination .page:hover {
+    color: #fbff00;
+    border: 2px solid #e3f300;
+    border-radius: 5px;
+}
+
+.pagination .active .page {
+    color: #fff;
+    border-radius: 5px;
+    /* border: 2px solid #e3f300; */
+    background-color: #f3e30760;
+}
+
+.pagination .page:focus {
+    color: #ffffff;
+    border: 2px solid #e3f300;
+    text-shadow: #fff;
+}
+
 .erlorefont {
     font-family: Garamond_Premier;
 }
@@ -12,20 +42,66 @@ html {
     height: 100%;
 }
 
-table.dataTable tbody tr a:hover,
+a {
+    text-decoration: none;
+}
+
+ul.list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    list-style-type: none;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+#list-header {
+    color: rgb(209, 127, 20);
+    /* font-size: 28px; */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.search {
+    background-color: #fff0;
+    border: 1px solid #cac40a;
+    font-family: Garamond_Premier;
+    border-radius: 0.25rem;
+}
+
+.search:focus {
+    color: #ffd103;
+    background-color: #cb1d1d00;
+    border-color: #fecf86;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+    background-color: #fff0;
+    border: 1px solid #ffae00;
+    width: 100%;
+    font-weight: 50;
+    display: inline-block;
+}
+
+label {
+    display: flex;
+    font-size: 17px;
+    color: #cac40a;
+    flex-direction: column;
+}
+
+.font-style {
+    color: goldenrod;
+}
+
+.lore-style a:hover,
 a:focus {
     color: rgb(255, 251, 0);
 
 }
 
-table.dataTable tbody tr a {
-    color: goldenrod;
-
-}
-
-a {
-    text-decoration: none;
-}
 
 .modal-backdrop {
     /* - no overlay */
@@ -38,13 +114,9 @@ a {
     --bs-modal-bg: #fff0;
 }
 
-.dataTables_empty {
-    color: white;
-}
-
 .modal-body {
     /* background-blend-mode: darken; */
-    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)), url('elden-ring-raani.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)), url('elden-ring-raani_1.webp');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -73,29 +145,19 @@ a {
     background-color: #000000ec;
 }
 
+table.dataTable tbody tr a {
+    color: goldenrod;
 
-.pagination {
-    --bs-pagination-padding-x: 0.75rem;
-    --bs-pagination-padding-y: 0.375rem;
-    --bs-pagination-font-size: 1rem;
-    --bs-pagination-color: #e3fd0d;
-    --bs-pagination-bg: #c9b5b500;
-    --bs-pagination-border-color: #c9b5b500;
-    --bs-pagination-border-radius: 0.375rem;
-    --bs-pagination-hover-color: #edfd05;
-    --bs-pagination-hover-bg: ffc107;
-    --bs-pagination-hover-border-color: #cac40a;
-    --bs-pagination-focus-color: #9f800f;
-    --bs-pagination-focus-bg: #d7ab0b12;
-    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(252, 253, 13, 0.25);
-    --bs-pagination-active-color: #fff;
-    --bs-pagination-active-bg: #fdf60d66;
-    --bs-pagination-active-border-color: #0d6efd00;
-    --bs-pagination-disabled-color: #6c757d;
-    --bs-pagination-disabled-bg: #2a0f0f00;
-    --bs-pagination-disabled-border-color: #1a8dff00;
-    padding-left: 0;
-    list-style: none;
+}
+
+.dataTables_empty {
+    color: white;
+}
+
+table.dataTable tbody tr a:hover,
+a:focus {
+    color: rgb(255, 251, 0);
+
 }
 
 table.display .tableheader tr th {
@@ -115,10 +177,13 @@ table.display .tableheader tr th {
     text-align: center;
 }
 
+
+
 .btn-outline-warning {
     --bs-btn-color: #c4b20c;
     --bs-btn-hover-bg: #ffda07e8;
-    font-weight: 600;
+    text-shadow: 0px 1px 0px #000000;
+    font-size: 17px
 }
 
 .form-control {
@@ -154,7 +219,14 @@ table.display .tableheader tr th {
 }
 
 @media (min-width: 1366.2px) {
-    .smallnav {
+
+    .smallnav,
+    .display,
+    #table_wrapper,
+    .dataTables_filter,
+    .dataTables_paginate,
+    #table,
+    #table-small {
         display: none;
     }
 
@@ -213,7 +285,7 @@ table.display .tableheader tr th {
     }
 
     .slika-iza {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("er-godwyn-the-golden-assassination.jpg");
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.842)), url("er-godwyn-the-golden-assassination.jpg");
         position: relative;
         overflow: hidden;
         background-position: center;
@@ -257,12 +329,27 @@ table.display .tableheader tr th {
 
 
 @media screen and (min-width:830px) and (max-width: 1366.1px) {
-    .smallnav {
+
+    .smallnav,
+    .display,
+    #table_wrapper,
+    .dataTables_filter,
+    .dataTables_paginate,
+    #table,
+    #table-small {
         display: none;
+    }
+
+    ul.list {
+        font-size: smaller;
     }
 
     .logo-slika {
         text-align: center;
+    }
+
+    #list-header {
+        font-size: 30px;
     }
 
     .logo-slika img {
@@ -284,7 +371,7 @@ table.display .tableheader tr th {
     }
 
     .slika-iza {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("er-godwyn-the-golden-assassination.jpg");
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.801)), url("er-godwyn-the-golden-assassination.jpg");
         height: 100%;
         position: relative;
         overflow: hidden;
@@ -295,10 +382,10 @@ table.display .tableheader tr th {
         background-position: 100%;
     }
 
-    .dataTables_filter {
+    /* .dataTables_filter {
         font-size: 15px;
         color: #cac40a
-    }
+    } */
 
     .margin-test {
         margin-right: 5px;
@@ -347,6 +434,7 @@ table.display .tableheader tr th {
     .btn-outline-warning {
         text-align: start !important;
         font-size: 12px !important;
+        --bs-btn-border-color: #ffc10700;
     }
 
     .pagination {
@@ -357,6 +445,13 @@ table.display .tableheader tr th {
 
 
 @media (max-width: 829.98px) {
+
+    #list-of-items,
+    #list-title,
+    #list-header,
+    #table-small {
+        display: none;
+    }
 
     .smallnav {
         float: right;
@@ -378,7 +473,8 @@ table.display .tableheader tr th {
 
     .dataTables_filter {
         font-size: 14px;
-        color: #cac40a
+        color: #cac40a;
+        width: 50%;
     }
 
     div {
@@ -456,5 +552,29 @@ table.display .tableheader tr th {
         width: 550px auto;
         height: 80px auto;
 
+    }
+
+    .pagination {
+        --bs-pagination-padding-x: 0.75rem;
+        --bs-pagination-padding-y: 0.375rem;
+        --bs-pagination-font-size: 1rem;
+        --bs-pagination-color: #e3fd0d;
+        --bs-pagination-bg: #c9b5b500;
+        --bs-pagination-border-color: #c9b5b500;
+        --bs-pagination-border-radius: 0.375rem;
+        --bs-pagination-hover-color: #edfd05;
+        --bs-pagination-hover-bg: ffc107;
+        --bs-pagination-hover-border-color: #cac40a;
+        --bs-pagination-focus-color: #9f800f;
+        --bs-pagination-focus-bg: #d7ab0b12;
+        --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(252, 253, 13, 0.25);
+        --bs-pagination-active-color: #fff;
+        --bs-pagination-active-bg: #fdf60d66;
+        --bs-pagination-active-border-color: #0d6efd00;
+        --bs-pagination-disabled-color: #6c757d;
+        --bs-pagination-disabled-bg: #2a0f0f00;
+        --bs-pagination-disabled-border-color: #1a8dff00;
+        padding-left: 0;
+        list-style: none;
     }
 }

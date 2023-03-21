@@ -21,9 +21,9 @@ DEBUG = env('DEBUG')
 ALLOWED_HOSTS = ['eldenlore.herokuapp.com/']
 
 if DEBUG :
-    ADMIN_ENABLED = True
-else:
     ADMIN_ENABLED = False
+else:
+    ADMIN_ENABLED = True
    
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -129,19 +129,19 @@ MEDIA_URL = '/media/'
 
 django_heroku.settings(locals())
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console'],
-             'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
-        },
-    },
-}
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'console': {
+#             'class': 'logging.StreamHandler',
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['console'],
+#              'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
+#         },
+#     },
+# }
 

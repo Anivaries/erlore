@@ -5,7 +5,6 @@ from .models import Lore, LoreItem, GroupModel
 from django.core.paginator import Paginator
 from urllib import request
 
-
 class GroupModelListView(ListView):
     model = GroupModel
     context_object_name = 'group_list'
@@ -30,7 +29,8 @@ class loreitemView(ListView):
         context = super().get_context_data(**kwargs)
         pk = self.kwargs['pk']
         context['title'] = GroupModel.objects.filter(group_name=GroupModel.objects.get(pk=pk))
-        return context  
+        return context
+        
 
 class LoreItemListView(ListView):
     model = LoreItem
@@ -46,15 +46,3 @@ class LoreItemListView(ListView):
         pk = self.kwargs['pk']
         context["naziv"] = Lore.objects.filter(name=Lore.objects.get(pk=pk))
         return context
-
-
-# Django search, but since im using DataTables, there is no need for this code 
-# class SearchResults(ListView):
-#     model = Lore
-#     template_name = 'base/search.html'
-#     context_object_name = 'search_lore'
-
-#     def get_queryset(self):
-#         query = self.request.GET.get('q')
-#         return Lore.objects.filter(name__icontains=query)
-    

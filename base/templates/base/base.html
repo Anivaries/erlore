@@ -5,7 +5,8 @@
         
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Elden Ring lore connection between with most important names, places, events, etc. and items that can be find in the game">
+        <meta name="description" content="Inspired by the Elden Ring lore, this website shows connection between items 
+                                          and some of the most important names in the game">
         <title>Elden Ring Lore</title>
         <!-- Font Awesome -->
         <link
@@ -24,6 +25,7 @@
         />
         <!-- DataTable -->
         {% comment %} <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.3/css/dataTables.bootstrap5.min.css"/> {% endcomment %}
+        {% comment %} <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" /> {% endcomment %}
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap5.min.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" type='text/css' href="{% static 'elden_ring_lore/static/css/style.css' %}">
@@ -118,7 +120,7 @@
 <!-- big nav -->
   <div class="logo-slika">
     <a href="/">
-      <img src="{% static 'elden_ring_lore/static/css/Site-logo.png'%}" alt='logo.png'/>
+      <img src="{% static 'elden_ring_lore/static/css/Site-logo_1.webp'%}" alt='logo.png'/>
       </a>
   </div>
       {% block group%}{% endblock %}{% block items%}{% endblock %}{% block content %}{% endblock %}{% block search%}{% endblock%}
@@ -149,14 +151,14 @@
   </div>        
 {% endif%}
 
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.js"></script>
 <script type="text/javascript" src="{% static 'elden_ring_lore/static/js/scripts.js' %}"></script>
+
 </body>
 </html>

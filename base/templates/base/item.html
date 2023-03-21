@@ -10,25 +10,47 @@
 <div class="container-fluid overflow-hidden mt-70">
     <div class="vh-100">
         <div class="row justify-content-center margin-test">
-            <table data-page-length='15' id="table" class="display" style="width:100%">
+            <!-- START Data display for larger screens START -->
+            <div class="back"><a href="{{request.META.HTTP_REFERER|escape}}">Back</a></div>
+                <h1 class="erlorefont" id="list-header">{{ naziv.0 }}</h1>
+            <div id="list-of-items">
+                <ul class="list">
+                    {% for item in loreitems%}
+                    <li class="item lore-style">
+                        <a class="item font-style erlorefont" style="text-decoration:none;"><button type="button" class="btn btn-outline-warning mb-1"  data-mdb-toggle="modal" data-mdb-target="#erModal{{ forloop.counter }}">
+                            {{ item.item_title }}
+                        </button></a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="search">Search:
+                        <input type="text" class="search"style="width:50%"/>
+                        </label>
+                    </div> 
+                    <div class="col-6">
+                        <ul class="pagination"></ul>
+                    </div> 
+                </div> 
+            </div>
+            <!-- END Data display for larger screens END -->
+            <!-- START Data display for small screens START -->
+            <table data-page-length='12' id="table" class="display" style="width:100%">
                 <thead class="tableheader">
-                    <tr><div><a href="{{request.META.HTTP_REFERER|escape}}">Back</a></div>
-                        <th class="erlorefont">{{ naziv.0 }}</th>
-                    </tr>
+                        <tr><th class="erlorefont">{{ naziv.0 }}</th></tr>
                 </thead>
                 <tbody>
                     {% for item in loreitems %}
                     <tr>
                         <td class="erlorefont"><button type="button" class="btn btn-outline-warning mb-1"  data-mdb-toggle="modal" data-mdb-target="#erModal{{ forloop.counter }}">
-                            
                                 {{ item.item_title }}
-                            
                         </button></td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
- 
+            <!-- END Data display for small screens END -->
                  <!-- Modal -->
                  {% for item in loreitems %}
                  <div class="modal fade" id="erModal{{forloop.counter}}" tabindex="-1" role="dialog" aria-labelledby="ERModalLabel" aria-hidden="true">
@@ -50,5 +72,6 @@
         </div>
     </div>
 </div>
+<script type="text/javascript" src="{% static 'elden_ring_lore/static/js/lists.js' %}"></script>
 {% endblock %}
 

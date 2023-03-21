@@ -1,4 +1,5 @@
 {% extends 'base/base.html'%}
+{% load static %}
 {% block items %}
 <style>
     .logo-slika {
@@ -7,32 +8,53 @@
   </style>
 <div class="container overflow-hidden mt-70">
     <div class="vh-100">
-        {% comment %} leaving it just in case
-            <form action="{% url 'lores:search_result' %}" method="get"> 
-            <input
-            type="search"
-            name="q"
-            placeholder="Search by title"
-            class="form-control"
-            />
-        </form> {% endcomment %}
-        
         <div class="row justify-content-center margin-test">
-                <h3 class="text-white mb-0"><table data-page-length='15' id="table" class="display" style="width:100%">
-                    <thead>
-                        <tr>
-                            <th class="text-center erlorefont" style="color:orange">{{ title.0 }}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for item in lore_list %}
-                        <tr> 
-                            <td class="erlorefont "><a style="text-decoration:none;" href="{% url 'lores:loreitems' item.id %}">{{item}}</a></td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table></h3>
+            <div class="text-center erlorefont" style="color:orange" id="list-title">
+                <h1>{{ title.0 }}</h1>
+            </div>
+            <h3 class="mb-0 text-white">
+                <!-- START Data display for larger screens START -->
+                <div id="list-of-items">
+                <ul class="list">
+                    {% for a in lore_list%}
+                    <li class="item lore-style">
+                        <a class="item font-style erlorefont" style="text-decoration:none;" href="{% url 'lores:loreitems' a.id %}">{{a}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="search">Search:
+                        <input type="text" class="search"style="width:50%"/>
+                        </label>
+                    </div> 
+                    <div class="col-6">
+                        <ul class="pagination"></ul>
+                    </div> 
+                </div> 
+            </div>
+            <!-- END Data display for larger screens END -->
+            <!-- START Data display for small screens START-->
+            <table data-page-length='12' id="table" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th class="text-center erlorefont" style="color:orange">{{ title.0 }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in lore_list %}
+                    <tr> 
+                        <td class="erlorefont "><a style="text-decoration:none;" href="{% url 'lores:loreitems' item.id %}">{{item}}</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <!-- END Data display for small screens END -->
+            </h3>
         </div>
     </div>
 </div>
+<script type="text/javascript" src="{% static 'elden_ring_lore/static/js/lists.js' %}"></script>
 {% endblock %}
+
+

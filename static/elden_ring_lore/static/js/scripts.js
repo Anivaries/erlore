@@ -1,14 +1,28 @@
-// turn off datatable pagination 
+
+var options = {
+  valueNames: ['item'],
+  page: 30,
+  pagination: [{
+    paginationClass: "pagination",
+    innerWindow: 1,
+    left: 1,
+    right: 1,
+    item: "<li><a class='page page-item' href='#'></a></li>"
+  }]
+};
+var dataList = new List('list-of-items', options);
+
 
 $(document).ready(function () {
   $('#table').dataTable({
-    "dom": 'lrti' + "<'row'<'col-sm-12 col-md-5'f><'col-sm-12 col-md-7'p>>",
-
+    "dom": 't' + "<'row'<'style='width:50%' col-md-6'f><' col-md-6'p>>",
     "autoWidth": true,
+    "regex": true,
     "responsive": true,
     "info": false,
     "searching": true,
     "lengthChange": false,
+    "stripeClasses": [],
     "ordering": false,
     "fnDrawCallback": function (oSettings) {
       if (oSettings._iDisplayLength > oSettings.fnRecordsDisplay()) {
@@ -16,10 +30,9 @@ $(document).ready(function () {
       } else {
         $(oSettings.nTableWrapper).find('.dataTables_paginate').show();
       }
-    }
+    },
   })
-})
-  ;
+});
 
 // 5 buttons datatable pagination
 $.fn.DataTable.ext.pager.numbers_length = 5;
