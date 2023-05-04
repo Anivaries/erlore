@@ -7,6 +7,10 @@ class GroupModel(models.Model):
     
     def __str__(self):
         return self.group_name
+    
+    def get_absolute_url(self):
+        return reverse("lores:lore_list", kwargs={"pk": self.pk})
+    
 
 class Lore(models.Model):
     name = models.CharField(max_length=50)
@@ -14,6 +18,9 @@ class Lore(models.Model):
     
     def __str__(self) -> str:
         return f"{self.name}"
+    
+    def get_absolute_url(self):
+        return reverse("lores:loreitems", kwargs={"pk": self.pk})
     
 
 

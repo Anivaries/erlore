@@ -16,7 +16,7 @@ class GroupModelListView(ListView):
         return context
 
 
-class loreitemView(ListView):
+class LoreitemView(ListView):
     model = Lore
     context_object_name = 'lore_list'
     template_name = 'base/lore_list.html'
