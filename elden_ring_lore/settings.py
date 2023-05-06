@@ -40,8 +40,6 @@ INSTALLED_APPS = [
 ]
 SITE_ID = 1
 
-if ADMIN_ENABLED is True:
-    INSTALLED_APPS.append('django.contrib.admin')
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
