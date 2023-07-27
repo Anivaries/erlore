@@ -11,3 +11,4 @@ Used PostgreSQL to store all data and it's hosted on Heroku.
 I have plans to expand this project with other FromSoftware games 
 
 
+https://eldenlore.herokuapp.com/
